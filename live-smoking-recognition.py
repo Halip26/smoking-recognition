@@ -24,8 +24,8 @@ protoPath = os.path.sep.join(["weights", "deploy.prototxt"])
 modelPath = os.path.sep.join(["weights", "res10_300x300_ssd_iter_140000.caffemodel"])
 net = cv2.dnn.readNetFromCaffe(protoPath, modelPath)
 
-# load the smoking detector model and label encoder
-print("[INFO] loading smoking detector...")
+# load the smoking recognition model and label encoder
+print("[INFO] loading smoking recognition...")
 model = load_model("weights/smoking.model")
 le = pickle.loads(open("weights/le.pickle", "rb").read())
 
@@ -85,7 +85,7 @@ while True:
             face = img_to_array(face)
             face = np.expand_dims(face, axis=0)
 
-            # pass the face ROI through the trained smoking detector
+            # pass the face ROI through the trained smoking recognition
             # model to determine if the face is "smoking" or "not smoking"
             predict = model.predict(face)[0]
             j = np.argmax(predict)

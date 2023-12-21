@@ -1,0 +1,11 @@
+# LIVE SMOKING DETECTOR
+
+<!-- ![Demo](demo.gif) -->
+
+A convolutional neural network-based smoking detector.
+
+how to use:
+
+- clone or download this repo.
+- install the dependencies using `pip install -r requirements.txt`.
+- run the script using `python.exe .\live-smoking-detector.py`.

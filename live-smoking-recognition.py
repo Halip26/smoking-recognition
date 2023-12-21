@@ -87,7 +87,7 @@ def main(args):
             break
 
         # uncomment jika Anda ingin menyimpan gambar
-        cv2.imwrite("live-smoking-recognition.jpg", frame)
+        # cv2.imwrite("live-smoking-recognition.jpg", frame)
 
     cv2.destroyAllWindows()
     vs.stop()

@@ -7,8 +7,8 @@ import time
 import os
 
 from imutils.video import VideoStream
-from tensorflow.keras.preprocessing.image import img_to_array
-from tensorflow.keras.models import load_model
+from keras.preprocessing.image import img_to_array
+from keras.models import load_model
 
 
 def main(args):
@@ -86,7 +86,7 @@ def main(args):
         if key == ord("q"):
             break
 
-        # uncomment jika Anda ingin menyimpan gambar
+        # uncomment jika kamu ingin menyimpan gambar
         # cv2.imwrite("live-smoking-recognition.jpg", frame)
 
     cv2.destroyAllWindows()

@@ -1,4 +1,4 @@
-# Smoking Recognition by [Halip26]([halip](https://halip26.github.io/))
+# Smoking Recognition by [Halip26](https://halip26.github.io/)
 
 ## Overview
 

@@ -83,11 +83,14 @@ def main(args):
         cv2.imshow("SMOKING_RECOGNITION v1.0", frame)
         key = cv2.waitKey(1) & 0xFF
 
-        if key == ord("q"):
+        if key == ord("esc"):
             break
 
-        # uncomment jika kamu ingin menyimpan gambar
-        # cv2.imwrite("live-smoking-recognition.jpg", frame)
+        # uncomment if you want to keep the image
+        # output_directory = "images/output/"
+        # os.makedirs(output_directory, exist_ok=True)
+
+        # cv2.imwrite("images/output/live-recognition-result.jpg", frame)
 
     cv2.destroyAllWindows()
     vs.stop()

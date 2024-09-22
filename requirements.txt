@@ -2,3 +2,5 @@ tensorflow
 opencv-python
 imutils
 numpy
+scikit-learn
+keras==3.2.0

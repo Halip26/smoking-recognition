@@ -27,7 +27,7 @@ This project aims to detect smoking in real-time using a webcam feed. It uses a 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/smoking-recognition.git
+    git clone https://github.com/halip26/smoking-recognition.git
     cd smoking-recognition
     ```
 
@@ -48,7 +48,7 @@ This project aims to detect smoking in real-time using a webcam feed. It uses a 
 Run the script using the command:
 
 ```bash
-python smoking_recognition.py --face_confidence 0.5
+python live-smoking-recognition.py --face_confidence 0.5
 ```
 
 Arguments:
@@ -57,7 +57,7 @@ Arguments:
 
 ## File Structure
 
-- `smoking_recognition.py`: Main script to run the smoking recognition system.
+- `live-smoking-recognition.py`: Main script to run the smoking recognition system.
 - `weights/`: Directory containing the model weights and configuration files.
   - `deploy.prototxt`: Face detector model configuration.
   - `res10_300x300_ssd_iter_140000.caffemodel`: Face detector model weights.

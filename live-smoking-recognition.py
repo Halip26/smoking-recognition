@@ -20,7 +20,7 @@ def main(args):
 
     # Load smoking recognition model and label encoder
     print("[INFO] Loading smoking recognition...")
-    model = load_model("weights/smoking.model")
+    model = load_model("weights/smoking.keras")
     le = pickle.loads(open("weights/le.pickle", "rb").read())
 
     # Start video stream
@@ -68,22 +68,22 @@ def main(args):
                 j = np.argmax(predict)
                 label = le.classes_[j]
 
-                label = "{}: {:.4f}".format(label, predict[j])
+                label = "{}: {:.4f}%".format(label, predict[j] * 100)
                 cv2.putText(
                     frame,
                     label,
                     (startX, startY - 10),
                     cv2.FONT_HERSHEY_SIMPLEX,
-                    0.5,
+                    0.8,
                     (0, 0, 255),
                     2,
                 )
                 cv2.rectangle(frame, (startX, startY), (endX, endY), (0, 0, 255), 2)
 
-        cv2.imshow("SMOKING_RECOGNITION v1.0", frame)
+        cv2.imshow("Smoking_Recognition_v1.0", frame)
         key = cv2.waitKey(1) & 0xFF
 
-        if key == ord("esc"):
+        if key == ord("q"):
             break
 
         # uncomment if you want to keep the image
@@ -102,7 +102,7 @@ if __name__ == "__main__":
         "-c",
         "--face_confidence",
         type=float,
-        default=0.5,
+        default=0.7,
         help="minimum probability to filter weak detections",
     )
     args = vars(ap.parse_args())

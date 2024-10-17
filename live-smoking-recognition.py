@@ -86,11 +86,11 @@ def main(args):
         if key == ord("q"):
             break
 
-        # uncomment if you want to keep the image
-        # output_directory = "images/output/"
-        # os.makedirs(output_directory, exist_ok=True)
+        # generate the image
+        output_directory = "images/output/"
+        os.makedirs(output_directory, exist_ok=True)
 
-        # cv2.imwrite("images/output/live-recognition-result.jpg", frame)
+        cv2.imwrite("images/output/live-recognition-result.jpg", frame)
 
     cv2.destroyAllWindows()
     vs.stop()
@@ -105,5 +105,6 @@ if __name__ == "__main__":
         default=0.7,
         help="minimum probability to filter weak detections",
     )
+
     args = vars(ap.parse_args())
     main(args)
